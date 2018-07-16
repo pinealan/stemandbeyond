@@ -1,3 +1,38 @@
-.speaker-section .speaker-image {
+.mdl-layout__header-row--center {
+    justify-content: center;
+}
+.mdl-layout__title--pad {
+    padding-right: 3px;
+}
+#typed-title {
+    font-weight: 500;
+}
+.speaker-section {
+    padding: 80px 0;
+    max-width: 1044px;
+    margin: 0 auto 0;
+}
+.speaker-section-title {
+    margin-left: 14px;
+}
+.speaker-image {
+    vertical-align: center;
     width: 100%;
+}
+.speaker-degree {
+    color: rgba(0,0,0,.54);
+    font-size: 14px;
+}
+.speaker-topic{
+    color: rgb(244,67,54);
+}
+.mdl-card__title--col {
+    flex-direction: column;
+}
+.mdl-card__title-text--begin {
+    align-self: start;
+}
+.mdl-card__media--clip {
+    height: 200px;
+    overflow: hidden;
 }

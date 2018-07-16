@@ -25,7 +25,6 @@
     {% for meta in metatags %}
     <meta name="{{ meta.tag }}" content="{{ meta.value }}">
     {% endfor %}
-
     <title>STEM and Beyond</title>
 
     <!-- Fonts -->
@@ -40,7 +39,7 @@
   <body>
     <div class="mdl-layout mdl-js-layout">
 
-      <header class="mdl-layout__header">
+      <header class="mdl-layout__header mdl-layout__header--scroll">
         <div class="mdl-layout__header-row mdl-layout__header-row--center">
           <span class="mdl-layout__title mdl-layout__title--pad">STEM:</span>
           <span class="mdl-layout__title" id="typed-title"></span>
@@ -54,12 +53,12 @@
       </div>
 
       <main class="mdl-layout__content">
-
         <section class="">
+          <p>{{ content.welcome }}</p>
         </section>
 
-        <section class="-customized-section">
-          {{ abstract }}
+        <section class="">
+          <p>{{ content.goal }}</p>
         </section>
 
         <section class="speaker-section" id="speakers">

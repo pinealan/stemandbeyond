@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import Model
 
 
-def speaker_photo_path(instance, filename):
+def format_photo_path(instance, filename):
     return '{}/{}'.format(
         instance.name.replace(' ', '-'),
         filename.replace(' ', '-')
@@ -12,7 +12,7 @@ def speaker_photo_path(instance, filename):
 class Speaker(Model):
     name = models.CharField(max_length=100)
     photo = models.ImageField(
-        upload_to=speaker_photo_path
+        upload_to=format_photo_path
     )
     degree = models.CharField(max_length=50)
     subject = models.CharField(max_length=50)
@@ -23,8 +23,17 @@ class Speaker(Model):
 
 
 class Metatag(Model):
+    NAME = 'name'
+    PROP = 'property'
+    ITEM = 'itemprop'
+
     tag = models.CharField(max_length=50)
-    value = models.CharField(max_length=100)
+    content = models.CharField(max_length=100)
+    attr = models.CharField(
+        max_length=30,
+        choices=((NAME, NAME), (ITEM, ITEM), (PROP, PROP)),
+        default=NAME,
+    )
 
     def __str__(self):
         return '{}: {}'.format(self.tag, self.value)
@@ -36,3 +45,13 @@ class Content(Model):
 
     def __str__(self):
         return self.field
+
+
+class Affiliates(Model):
+    name = models.CharField(max_length=100)
+    photo = models.ImageField(
+        upload_to=format_photo_path
+    )
+
+    def __str__(self):
+        return self.name

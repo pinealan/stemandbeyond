@@ -8,5 +8,4 @@ stem/wsgi.py
 
 media/
 static/admin/
-*/migrations
 **/__pycache__

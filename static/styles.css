@@ -7,10 +7,17 @@
 #typed-title {
     font-weight: 500;
 }
-.stem-speaker {
-    padding: 80px 0;
+.stem-welcome,
+.stem-goal,
+.stem-speaker,
+.stem-affiliate
+{
+    padding: 60px 0 0;
     max-width: 1044px;
     margin: 0 auto 0;
+}
+.stem-goal {
+    text-align: center;
 }
 .stem-speaker-title {
     margin-left: 14px;

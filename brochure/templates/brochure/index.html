@@ -38,11 +38,13 @@
 
       <main class="mdl-layout__content">
         <section class="stem-welcome">
+          <p>
           <p>{{ content.welcome }}</p>
+          <span>Registion opens soon!</span>
         </section>
 
         <section class="stem-goal">
-          <h2 class="stem-speaker-title mdl-typography--display-1-color-contrast">Our goal</h2>
+          <h2 class="mdl-typography--display-1-color-contrast">Our goal</h2>
           <p>{{ content.goal }}</p>
         </section>
 
@@ -67,10 +69,19 @@
           </div>
         </section>
 
-        <section class="stem-affiliates" id="affiliates">
-          <h2 class="">Affiliated organisations</h2>
-          {% for org in affiliate %}
+        <section class="stem-affiliate" id="affiliates">
+          <h2 class="stem-speaker-title mdl-typography--display-1-color-contrast">Affiliated organisations</h2>
+          {% for org in content.affiliate %}
+          <img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}">
+          {% endfor %}
         </section>
+
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer__left-section">
+          </div>
+          <div class="mdl-mini-footer__right-section">
+          </div>
+        </footer>
       </main>
     </div>
 
@@ -78,13 +89,15 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://mattboldt.com/typed.js/lib/typed.js"></script>
     <script>
-      var typed = new Typed("#typed-title", {
-        strings: ['Science', 'Technology', 'Engineering', 'Mathematics'],
-        typeSpeed: 50,
-        backSpeed: 40,
-        backDelay: 800,
-        loop: true,
-      });
+      (function() {
+        var typed = new Typed("#typed-title", {
+          strings: ['Science', 'Technology', 'Engineering', 'Mathematics'],
+          typeSpeed: 50,
+          backSpeed: 40,
+          backDelay: 800,
+          loop: true,
+        });
+      })();
     </script>
   </body>
 

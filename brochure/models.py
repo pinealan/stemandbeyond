@@ -28,3 +28,8 @@ class Metatag(Model):
 
     def __str__(self):
         return '{}: {}'.format(self.tag, self.value)
+
+
+class Content(Model):
+    field = models.CharField(max_length=100)
+    text = models.TextField()

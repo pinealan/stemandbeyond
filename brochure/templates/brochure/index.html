@@ -31,38 +31,45 @@
 
       <div class="mdl-layout__drawer">
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="#speakers">Speaker</a>
+          <a class="mdl-navigation__link" href="#speakers">Speakers</a>
+          <a class="mdl-navigation__link" href="#affiliates">Affiliates</a>
         </nav>
       </div>
 
       <main class="mdl-layout__content">
-        <section class="">
+        <section class="stem-welcome">
           <p>{{ content.welcome }}</p>
         </section>
 
-        <section class="">
+        <section class="stem-goal">
+          <h2 class="stem-speaker-title mdl-typography--display-1-color-contrast">Our goal</h2>
           <p>{{ content.goal }}</p>
         </section>
 
-        <section class="speaker-section" id="speakers">
-          <h2 class="speaker-section-title mdl-typography--display-1-color-contrast">Speakers</h2>
+        <section class="stem-speaker" id="speakers">
+          <h2 class="stem-speaker-title mdl-typography--display-1-color-contrast">Speakers</h2>
           <div class="mdl-grid">
           {% for s in speakers %}
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media mdl-card__media--clip">
-                <img class="speaker-image" src="media/{{ s.photo }}" border="0" alt="">
+                <img class="stem-speaker-image" src="media/{{ s.photo }}" border="0" alt="">
               </div>
               <div class="mdl-card__title mdl-card__title--col">
                 <h4 class="mdl-card__title-text mdl-card__title-text--begin">{{ s.name }}</h4>
-                <h5 class="speaker-degree mdl-card__title-text mdl-card__title-text--begin">{{ s.degree }}</h5>
+                <h5 class="stem-speaker-degree mdl-card__title-text mdl-card__title-text--begin">{{ s.degree }}</h5>
               </div>
               <div class="mdl-card__supporting-text">
-                <p class="speaker-topic mdl-typography--title">{{ s.subject }}</p>
+                <p class="stem-speaker-topic mdl-typography--title">{{ s.subject }}</p>
                 <p>{{ s.abstract }}</p>
               </div>
             </div>
           {% endfor %}
           </div>
+        </section>
+
+        <section class="stem-affiliates" id="affiliates">
+          <h2 class="">Affiliated organisations</h2>
+          {% for org in affiliate %}
         </section>
       </main>
     </div>

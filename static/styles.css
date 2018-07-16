@@ -7,23 +7,23 @@
 #typed-title {
     font-weight: 500;
 }
-.speaker-section {
+.stem-speaker {
     padding: 80px 0;
     max-width: 1044px;
     margin: 0 auto 0;
 }
-.speaker-section-title {
+.stem-speaker-title {
     margin-left: 14px;
 }
-.speaker-image {
+.stem-speaker-image {
     vertical-align: center;
     width: 100%;
 }
-.speaker-degree {
+.stem-speaker-degree {
     color: rgba(0,0,0,.54);
     font-size: 14px;
 }
-.speaker-topic{
+.stem-speaker-topic{
     color: rgb(244,67,54);
 }
 .mdl-card__title--col {

@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    {% for meta in metatags %}
-    <meta name="{{ meta.tag }}" content="{{ meta.value }}">
+    {% for m in metatags %}
+    <meta "{{ m.attr }}"="{{ m.tag }}" content="{{ m.content }}">
     {% endfor %}
     <title>STEM and Beyond</title>
 
@@ -20,9 +20,9 @@
   </head>
 
   <body>
-    <div class="mdl-layout mdl-js-layout">
+    <div class="mdl-layout mdl-layout--no-drawer-button mdl-js-layout">
 
-      <header class="mdl-layout__header mdl-layout__header--scroll">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--shadow">
         <div class="mdl-layout__header-row mdl-layout__header-row--center">
           <span class="mdl-layout__title mdl-layout__title--pad">STEM:</span>
           <span class="mdl-layout__title" id="typed-title"></span>
@@ -38,9 +38,8 @@
 
       <main class="mdl-layout__content">
         <section class="stem-welcome">
-          <p>
           <p>{{ content.welcome }}</p>
-          <span>Registion opens soon!</span>
+          <span>Registration opens soon!</span>
         </section>
 
         <section class="stem-goal">
@@ -70,8 +69,8 @@
         </section>
 
         <section class="stem-affiliate" id="affiliates">
-          <h2 class="stem-speaker-title mdl-typography--display-1-color-contrast">Affiliated organisations</h2>
-          {% for org in content.affiliate %}
+          <h2 class="stem-speaker-title mdl-typography--display-1-color-contrast">Affiliates</h2>
+          {% for org in affiliates %}
           <img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}">
           {% endfor %}
         </section>

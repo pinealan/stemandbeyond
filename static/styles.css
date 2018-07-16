@@ -1,6 +1,9 @@
 .mdl-layout__header-row--center {
     justify-content: center;
 }
+.mdl-layout__header--shadow {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .28);
+}
 .mdl-layout__title--pad {
     padding-right: 3px;
 }
@@ -42,4 +45,13 @@
 .mdl-card__media--clip {
     height: 200px;
     overflow: hidden;
+}
+.stem-affiliate {
+    margin-bottom: 80px;
+}
+.stem-affiliate-image {
+    max-height: 240px;
+    max-width: 80vw;
+    padding: 15px;
+    width: auto;
 }

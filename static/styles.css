@@ -4,7 +4,7 @@
 .text-white {
     color: rgb(248,248,248);
 }
-.mdl-layout__content {
+main {
     background-image: url('/static/background.svg');
     background-size: cover;
     background-repeat: repeat-y;
@@ -19,7 +19,8 @@
     padding-right: 3px;
 }
 .mdl-card--wide {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100vw;
 }
 .mdl-card__main-text {
     padding: 32px;
@@ -33,6 +34,7 @@
     margin: auto;
     max-width: 1200px;
     padding: 60px 0 0;
+    width: 100vw;
 }
 .stem-speaker,
 .stem-affiliate {

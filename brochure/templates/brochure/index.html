@@ -20,16 +20,7 @@
   </head>
 
   <body>
-    <div class="mdl-layout mdl-layout--no-drawer-button mdl-js-layout">
-
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--shadow">
-        <div class="mdl-layout__header-row mdl-layout__header-row--center">
-          <span class="mdl-layout__title mdl-layout__title--pad">STEM:</span>
-          <span class="mdl-layout__title" id="typed-title"></span>
-        </div>
-      </header>
-
-      <main class="mdl-layout__content">
+      <main>
         <section class="stem-lightbulb">
           <img class="stem-lightbulb-img" src="/static/logo-trans.png" alt="STEM and Beyond logo">
           <div class="stem-lightbulb-bg"></div>
@@ -37,7 +28,7 @@
 
         <section class="stem-welcome">
           <div class="mdl-card mdl-shadow--6dp mdl-card--wide">
-            <h2 class="mdl-card__title">What do you want to do at&nbsp;<span class="text-red">university?</span></h2>
+            <h2 class="mdl-card__title">What do you want to do at university?</h2>
             <p class="mdl-card__main-text">{{ content.welcome }}</p>
             <button class="mdl-button mdl-js-button mdl-button--raised" disabled>Registration opens soon!</button>
           </div>
@@ -85,6 +76,7 @@
             <span class="mdl-logo">STEM and Beyond 2018</span>
           </div>
           <div class="mdl-mini-footer__right-section">
+            <span class="mdl-typography--display-1" id="typed-title"></span>
           </div>
         </footer>
       </main>

@@ -1,3 +1,14 @@
+.text-red {
+    color: rgb(244,67,54);
+}
+.text-white {
+    color: rgb(248,248,248);
+}
+.mdl-layout__content {
+    background-image: url('/static/background.svg');
+    background-size: cover;
+    background-repeat: repeat-y;
+}
 .mdl-layout__header-row--center {
     justify-content: center;
 }
@@ -7,17 +18,27 @@
 .mdl-layout__title--pad {
     padding-right: 3px;
 }
+.mdl-card--wide {
+    width: 1200px;
+}
+.mdl-card__main-text {
+    padding: 32px;
+}
 #typed-title {
     font-weight: 500;
 }
 .stem-lightbulb,
 .stem-welcome,
-.stem-goal,
+.stem-goal {
+    margin: auto;
+    max-width: 1200px;
+    padding: 60px 0 0;
+}
 .stem-speaker,
 .stem-affiliate {
-    padding: 60px 0 0;
-    max-width: 1044px;
     margin: 0 auto 0;
+    max-width: 1044px;
+    padding: 60px 0 0;
 }
 .stem-lightbulb-img {
     max-height: 400px;

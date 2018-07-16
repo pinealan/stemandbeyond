@@ -1,0 +1,10 @@
+*.sqlite3
+*.jpg
+*.png
+*.pdf
+
+manage.py
+stem/wsgi.py
+
+static/admin/
+*/migrations

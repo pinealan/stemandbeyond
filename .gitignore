@@ -4,9 +4,6 @@
 *.png
 *.pdf
 
-manage.py
-stem/wsgi.py
-
 media/
 static/admin/
 **/__pycache__

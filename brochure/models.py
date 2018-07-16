@@ -28,15 +28,15 @@ class Metatag(Model):
     ITEM = 'itemprop'
 
     tag = models.CharField(max_length=50)
-    content = models.CharField(max_length=100)
     attr = models.CharField(
         max_length=30,
         choices=((NAME, NAME), (ITEM, ITEM), (PROP, PROP)),
         default=NAME,
     )
+    content = models.CharField(max_length=100)
 
     def __str__(self):
-        return '{}: {}'.format(self.tag, self.value)
+        return '{}: {}'.format(self.tag, self.content)
 
 
 class Content(Model):

@@ -2,9 +2,18 @@ from django.db import models
 from django.db.models import Model
 
 
+def speaker_photo_path(instance, filename):
+    return '{}/{}'.format(
+        instance.name.replace(' ', '-'),
+        filename.replace(' ', '-')
+    )
+
+
 class Speaker(Model):
     name = models.CharField(max_length=100)
-    photo = models.ImageField()
+    photo = models.ImageField(
+        upload_to=speaker_photo_path
+    )
     degree = models.CharField(max_length=50)
     subject = models.CharField(max_length=50)
     abstract = models.TextField()

@@ -47,7 +47,7 @@ class Content(Model):
         return self.field
 
 
-class Affiliates(Model):
+class Affiliate(Model):
     name = models.CharField(max_length=100)
     photo = models.ImageField(
         upload_to=format_photo_path

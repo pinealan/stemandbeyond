@@ -6,5 +6,6 @@
 manage.py
 stem/wsgi.py
 
+media/
 static/admin/
 */migrations

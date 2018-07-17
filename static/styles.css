@@ -105,6 +105,9 @@ main {
     height: 300px;
     overflow: hidden;
 }
+.mdl-card__media {
+    background-color: inherit;
+}
 .stem-affiliate {
     margin-bottom: 80px;
 }

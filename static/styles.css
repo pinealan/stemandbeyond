@@ -15,45 +15,11 @@ main {
     background-size: cover;
     background-repeat: repeat-y;
 }
-.stem-card--wide {
-    max-width: 1200px;
-    margin: auto;
-    padding: 4px;
-    width: 90vw;
-}
-.stem-welcome h3 {
-    font-size: 40px;
-}
-.stem-welcome h4 {
-    font-weight: 500;
-}
-@media (min-width: 600px) {
-    .stem-card--wide {
-        padding: 16px 96px;
-    }
-}
 .stem-landing {
     margin: auto;
     max-width: 1200px;
     padding: 80px 0 60px;
     width: 100vw;
-}
-.stem-lightbulb-img {
-    max-height: 500px;
-    max-width: 100vw;
-    width: auto;
-}
-.stem-welcome,
-.stem-goal {
-    margin: auto;
-    max-width: 1200px;
-    padding: 30px 0 0;
-    width: 90vw;
-}
-.stem-speaker {
-    margin: 0 auto 0;
-    max-width: 1200px;
-    padding: 60px 0 0;
 }
 @keyframes glow {
     0% {
@@ -87,6 +53,35 @@ main {
         left: 445px;
         top: -135px;
         border-radius: 50px;
+    }
+}
+.stem-welcome,
+.stem-goal {
+    margin: auto;
+    max-width: 1200px;
+    padding: 30px 0 0;
+    width: 90vw;
+}
+.stem-speaker {
+    margin: 0 auto 0;
+    max-width: 1200px;
+    padding: 60px 0 0;
+}
+.stem-card--wide {
+    max-width: 1200px;
+    margin: auto;
+    padding: 4px;
+    width: 90vw;
+}
+.stem-welcome h3 {
+    font-size: 40px;
+}
+.stem-welcome h4 {
+    font-weight: 500;
+}
+@media (min-width: 600px) {
+    .stem-card--wide {
+        padding: 16px 96px;
     }
 }
 .stem-speaker-title {

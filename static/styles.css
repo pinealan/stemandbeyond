@@ -1,13 +1,16 @@
-.text-red {
+.color-red {
     color: rgb(244,67,54);
 }
-.text-white {
+.color-orange {
+    color: #ff8a65;
+}
+.color-white {
     color: rgb(248,248,248);
 }
-.text-grey {
+.color-grey {
     color: rgba(0,0,0,.64);
 }
-.text-black {
+.color-black {
     color: rgba(0,0,0,.84);
 }
 main {
@@ -16,10 +19,17 @@ main {
     background-repeat: repeat-y;
 }
 .stem-landing {
+    display: flex;
+    justify-content: space-between;
     margin: auto;
     max-width: 1200px;
     padding: 80px 0 60px;
     width: 100vw;
+}
+.stem-landing-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 @keyframes glow {
     0% {
@@ -61,6 +71,10 @@ main {
     max-width: 1200px;
     padding: 30px 0 0;
     width: 90vw;
+}
+.stem-goal p {
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .stem-speaker {
     margin: 0 auto 0;

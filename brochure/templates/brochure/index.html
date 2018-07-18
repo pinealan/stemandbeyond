@@ -30,16 +30,29 @@
 
         <section class="stem-welcome">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
-            <h3 class="mdl-card__title">What do you want to do at university?</h3>
-            <p class="mdl-card__supporting-text text-black">{{ content.welcome }}</p>
+            <h3 class="mdl-card__title text-grey">What do you want to do at university?</h3>
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col">
+                <h4>{{ content.welcome_header_1 }}</h4>
+                <p>{{ content.welcome_text_1 }}</p>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col">
+                <h4>{{ content.welcome_header_2 }}</h4>
+                <p>{{ content.welcome_text_2 }}</p>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col">
+                <h4>{{ content.welcome_header_3 }}</h4>
+                <p>{{ content.welcome_text_3 }}</p>
+              </div>
+            </div>
             <button class="mdl-button mdl-js-button mdl-button--raised" disabled>Registration opens soon!</button>
           </div>
         </section>
 
         <section class="stem-goal">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
-            <h3 class="mdl-card__title text-red">Our goal</h3>
-            <p class="mdl-card__supporting-text text-black">{{ content.goal }}</p>
+            <h3 class="mdl-card__title">Our goal</h3>
+            <p>{{ content.goal }}</p>
           </div>
         </section>
 

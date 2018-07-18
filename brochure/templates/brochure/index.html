@@ -21,7 +21,7 @@
 
   <body>
       <main>
-        <section class="stem-lightbulb">
+        <section class="stem-landing">
           <div class="stem-lightbulb-holder">
             <img class="stem-lightbulb-img" src="/static/logo-trans.png" alt="STEM and Beyond logo">
             <div class="stem-lightbulb-glow"></div>
@@ -57,28 +57,24 @@
               </div>
               <div class="mdl-card__supporting-text">
                 <p class="stem-speaker-topic mdl-typography--title">{{ s.subject }}</p>
-                <p>{{ s.abstract }}</p>
+                <p class="">{{ s.abstract }}</p>
               </div>
             </div>
           {% endfor %}
           </div>
         </section>
 
-        <section class="stem-affiliate" id="affiliates">
-          <h2 class="stem-speaker-title mdl-typography--display-2-color-contrast">Affiliates</h2>
-          {% for org in affiliates %}
-          <img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}">
-          {% endfor %}
-        </section>
-
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1844.6640534461887!2d114.19230577180042!3d22.378985082991246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406549b921f65%3A0x2ac424852e95d8b3!2sThe+Hong+Kong+Academy+for+Gifted+Education!5e0!3m2!1sen!2suk!4v1531719471533" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-        <footer class="mdl-mini-footer">
+        <footer class="stem-footer mdl-mini-footer">
           <div class="mdl-mini-footer__left-section">
-            <span class="mdl-logo">STEM and Beyond 2018</span>
+            <span class="mdl-typography--title">Affiliates</span>
+            {% for org in affiliates %}
+            <img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}">
+            {% endfor %}
           </div>
           <div class="mdl-mini-footer__right-section">
-            <span class="mdl-typography--display-1" id="typed-title"></span>
+            <span class="mdl-typography--display-2-color-contrast" id="typed-title"></span>
           </div>
         </footer>
       </main>

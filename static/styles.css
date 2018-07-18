@@ -20,15 +20,13 @@ main {
 }
 .mdl-card--wide {
     max-width: 1200px;
-    width: 100vw;
+    margin: auto;
+    width: 95vw;
 }
 .mdl-card__main-text {
     padding: 32px;
 }
-#typed-title {
-    font-weight: 500;
-}
-.stem-lightbulb,
+.stem-landing,
 .stem-welcome,
 .stem-goal {
     margin: auto;
@@ -36,14 +34,13 @@ main {
     padding: 60px 0 0;
     width: 100vw;
 }
-.stem-speaker,
-.stem-affiliate {
+.stem-speaker {
     margin: 0 auto 0;
     max-width: 1044px;
     padding: 60px 0 0;
 }
 .stem-lightbulb-img {
-    max-height: 400px;
+    max-height: 500px;
     max-width: 100vw;
     width: auto;
 }
@@ -64,7 +61,7 @@ main {
     width: 0;
     border-radius: 30px;
 }
-@media (min-width: 524px) {
+@media (min-width: 500px) {
     @keyframes glow {
         0% {
             box-shadow: 0 0 30px 30px rgb(255,243,82);
@@ -108,12 +105,13 @@ main {
 .mdl-card__media {
     background-color: inherit;
 }
-.stem-affiliate {
-    margin-bottom: 80px;
-}
 .stem-affiliate-image {
-    max-height: 240px;
+    max-height: 100px;
     max-width: 80vw;
-    padding: 15px;
+    padding: 0 5px;
     width: auto;
+}
+.stem-footer {
+    background: #ffffff;
+    color: #333;
 }

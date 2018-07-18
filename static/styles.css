@@ -9,22 +9,10 @@ main {
     background-size: cover;
     background-repeat: repeat-y;
 }
-.mdl-layout__header-row--center {
-    justify-content: center;
-}
-.mdl-layout__header--shadow {
-    box-shadow: 0 0 4px rgba(0, 0, 0, .28);
-}
-.mdl-layout__title--pad {
-    padding-right: 3px;
-}
-.mdl-card--wide {
+.stem-card--wide {
     max-width: 1200px;
     margin: auto;
     width: 95vw;
-}
-.mdl-card__main-text {
-    padding: 32px;
 }
 .stem-landing,
 .stem-welcome,

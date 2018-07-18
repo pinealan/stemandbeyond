@@ -8,7 +8,7 @@ def index(req):
     context = {}
     context['content'] = {blob.field: blob.text for blob in Content.objects.all()}
     context['speakers'] = list(Speaker.objects.all())
-    context['metatagss'] = list(Metatag.objects.all())
+    context['metatags'] = list(Metatag.objects.all())
     context['affiliates'] = list(Affiliate.objects.all())
 
     return render(req, 'brochure/index.html', context=context)

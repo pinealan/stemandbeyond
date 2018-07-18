@@ -25,19 +25,20 @@
   <body>
       <main>
         <section class="stem-landing">
-          <div class="stem-landing-details">
-            <p class="mdl-typography--title color-grey">Date: <span class="mdl-typography--headline color-orange">{{ content.date }}</span></p>
-            <p class="mdl-typography--title color-grey">Venue: <span class="mdl-typography--headline color-orange">{{ content.venue }}</span></p>
-          </div>
           <div class="stem-lightbulb-holder">
             <img class="stem-lightbulb-img" src="/static/logo-trans.png" alt="STEM and Beyond logo">
             <div class="stem-lightbulb-glow"></div>
+          </div>
+          <div class="stem-landing-details">
+            <p class="mdl-typography--title color-grey">Date: <span class="mdl-typography--headline color-orange">{{ content.date }}</span></p>
+            <p class="mdl-typography--title color-grey">Venue: <span class="mdl-typography--headline color-orange">{{ content.venue }}</span></p>
           </div>
         </section>
 
         <section class="stem-welcome">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
             <h3 class="mdl-card__title color-grey">What do you want to do at university?</h3>
+            <p class="stem-card__main-text">{{ content.welcome }}</p>
             <div class="mdl-grid">
               <div class="mdl-cell mdl-cell--4-col">
                 <h4>{{ content.welcome_header_1 }}</h4>
@@ -52,14 +53,13 @@
                 <p>{{ content.welcome_text_3 }}</p>
               </div>
             </div>
-            <button class="mdl-button mdl-js-button mdl-button--raised" disabled>Registration opens soon!</button>
           </div>
         </section>
 
         <section class="stem-goal">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
             <h3 class="mdl-card__title color-grey">Our goal</h3>
-            <p>{{ content.goal }}</p>
+            <p class="stem-card__main-text">{{ content.goal }}</p>
           </div>
         </section>
 

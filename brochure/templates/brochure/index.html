@@ -86,13 +86,29 @@
               <div class="mdl-card__supporting-text">
                 <p class="stem-speaker-topic mdl-typography--title">{{ s.subject }}</p>
                 <p>{{ s.abstract | truncatewords:20 }}</p>
-                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect">show more</button>
+                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' }}-overlay">show more</button>
               </div>
 
-              <div class="stem-show-more mdl-shadow--6dp">
-                <div class="mdl-card__supporting-text mdl-color-text--black">
-                  <h4>{{ s.title }}</h4>
-                  <p>{{ s.abstract }}</p>
+              <div class="stem-show-more mdl-shadow--6dp" id="{{ s.name | cut:' ' }}-overlay">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                  <div class="mdl-tabs__tab-bar">
+                    <a href="#{{ s.name | cut:' ' }}-abstract" class="mdl-tabs__tab is-active">Talk</a>
+                    <a href="#{{ s.name | cut:' ' }}-profile" class="mdl-tabs__tab">About</a>
+                  </div>
+
+                  <div class="mdl-tabs__panel is-active" id="{{ s.name | cut:' ' }}-abstract">
+                    <div class="mdl-card__supporting-text mdl-color-text--black">
+                      <h4>{{ s.title }}</h4>
+                      <p>{{ s.abstract }}</p>
+                    </div>
+                  </div>
+
+                  <div class="mdl-tabs__panel" id="{{ s.name | cut:' ' }}-profile">
+                    <div class="mdl-card__supporting-text mdl-color-text--black">
+                      <p>{{ s.profile }}</p>
+                    </div>
+                  </div>
+
                   <button class="stem-hide-button mdl-button mdl-button--fab mdl-button--primary mdl-js-button mdl-js-ripple-effect">
                     <i class="material-icons">close</i>
                   </button>

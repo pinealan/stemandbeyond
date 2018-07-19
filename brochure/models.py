@@ -15,9 +15,15 @@ class Speaker(Model):
         upload_to=format_photo_path,
         blank=True
     )
-    degree = models.CharField(max_length=50, blank=True)
+    title = models.CharField(max_length=100, blank=True)
+    degree = models.CharField(max_length=100, blank=True)
     subject = models.CharField(max_length=50, blank=True)
     abstract = models.TextField(blank=True)
+
+    chin_title = models.CharField(max_length=100, blank=True)
+    chin_degree = models.CharField(max_length=50, blank=True)
+    chin_subject = models.CharField(max_length=50, blank=True)
+    chin_abstract = models.TextField(blank=True)
 
     def __str__(self):
         return self.name

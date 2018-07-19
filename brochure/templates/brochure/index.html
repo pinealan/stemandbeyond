@@ -86,12 +86,12 @@
               <div class="mdl-card__supporting-text">
                 <p class="stem-speaker-topic mdl-typography--title">{{ s.subject }}</p>
                 <p>{{ s.abstract | truncatewords:20 }}</p>
-                <button class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect">show more</button>
+                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect">show more</button>
               </div>
-              <div class="mdl-card__show-more mdl-shadow--6dp">
+              <div class="stem-show-more mdl-shadow--6dp">
                 <div class="mdl-card__supporting-text">
                   <p>{{ s.abstract }}</p>
-                  <button class="mdl-button mdl-button--fab mdl-button--colored mdl-card__hide-button">
+                  <button class="stem-hide-button mdl-button mdl-button--fab mdl-button--primary mdl-js-button mdl-js-ripple-effect">
                     <i class="material-icons">close</i>
                   </button>
                 </div>
@@ -124,6 +124,7 @@
     <script src="https://mattboldt.com/typed.js/lib/typed.js"></script>
     <script>
       (function() {
+
         var typed = new Typed("#typed-title", {
           strings: ['Science', 'Technology', 'Engineering', 'Mathematics'],
           typeSpeed: 50,
@@ -131,6 +132,23 @@
           backDelay: 800,
           loop: true,
         });
+
+        var show = document.getElementsByClassName('stem-show-button');
+        Array.forEach(show, function(item, index) {
+          item.onclick = function() {
+            console.log(this);
+            console.log(this.parentElement.nextElementSibling);
+            this.parentElement.nextElementSibling.classList.add('stem-show-more--shown');
+          };
+        });
+
+        var hide = document.getElementsByClassName('stem-hide-button');
+        Array.forEach(hide, function(item, index) {
+          item.onclick = function() {
+            this.parentElement.parentElement.classList.remove('stem-show-more--shown');
+          };
+        });
+
       })();
     </script>
   </body>

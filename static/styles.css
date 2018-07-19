@@ -139,68 +139,26 @@ p {
 .mdl-card__media {
     background-color: inherit;
 }
-@-webkit-keyframes slideInLeft {
-  from {
-    display: none;
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-  }
-  to {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-@keyframes slideInLeft {
-  from {
-    display: none;
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-  }
-  to {
-    -webkit-transform: translate(0, 0, 0);
-    transform: translate(0, 0, 0);
-  }
-}
-@-webkit-keyframes slideOutLeft {
-  from {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  to {
-    display: none;
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-  }
-}
-@keyframes slideOutLeft {
-  from {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  to {
-    display: none;
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-  }
-}
-.mdl-card__show-more {
+.stem-show-more {
     background-color: rgba(255,255,255,.98);
     position: absolute;
     height: 100%;
     width: 100%;
-    left: 0;
+    left: -102%;
     top: 0;
+    transition: transform .5s;
 }
-.mdl-card__show-more--hidden {
-    animation: slideOutLeft 1s;
+.stem-show-more--shown {
+    -webkit-transform: translate(102%, 0);
+    transform: translate(102, 0);
 }
-.mdl-card__show-more--shown {
-    animation: slideInLeft 1s;
-}
-.mdl-card__hide-button {
+.stem-hide-button {
     position: absolute;
     bottom: 10px;
     left: 10px;
+}
+.stem-show-button {
+
 }
 .stem-affiliate-image {
     max-height: 100px;

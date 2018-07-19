@@ -31,7 +31,8 @@
           </div>
           <div class="stem-landing-details">
             <p class="mdl-typography--title color-grey">Date: <span class="mdl-typography--headline color-orange">{{ content.date }}</span></p>
-            <p class="mdl-typography--title color-grey">Venue: <span class="mdl-typography--headline color-orange">{{ content.venue }}</span></p>
+            <p class="mdl-typography--title color-grey">Venue: <a href="#contact-us"><span class="mdl-typography--headline color-orange">{{ content.venue }}</span></a></p>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" style="max-width: 250px; margin-top: 10px;" disabled>Registraion opens soon!</button>
           </div>
         </section>
 
@@ -102,7 +103,7 @@
               {% endfor %}
             </div>
             <div class="mdl-mini-footer__right-section">
-              <p class="mdl-typography--headline" style="padding-top: 25px;">Contact Us: <a href="mailto:info@stemandbeyond.org"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
+              <p class="mdl-typography--headline" style="padding-top: 25px;" id="contact-us">Contact Us: <a href="mailto:info@stemandbeyond.org"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
             </div>
           </div>
         </footer>

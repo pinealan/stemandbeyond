@@ -37,8 +37,8 @@
 
         <section class="stem-welcome">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
-            <h3 class="mdl-card__title color-grey">What do you want to do at university?</h3>
-            <p class="mdl-card__supporting-text stem-card__main-text">{{ content.welcome }}</p>
+            <h3 class="mdl-card__title color-grey">What do You want to do at University?</h3>
+            <p class="color-grey" style="padding: 0 16px;">{{ content.welcome }}</p>
             <div class="mdl-grid">
               <div class="mdl-cell mdl-cell--4-col">
                 <h4>{{ content.welcome_header_1 }}</h4>
@@ -58,8 +58,15 @@
 
         <section class="stem-goal">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
-            <h3 class="mdl-card__title color-grey">Our goal</h3>
-            <p class="mdl-card__supporting-text stem-card__main-text">{{ content.goal }}</p>
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col">
+                <h3 class="mdl-card__title color-grey" style="padding: 16px 0;">Our Goal</h3>
+                <span class="mdl-typography--display-1-color-contrast" id="typed-title"></span>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col">
+                <p class="color-grey" style="padding: 32px 0 0;">{{ content.goal }}</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -89,14 +96,13 @@
         <footer class="stem-footer mdl-mini-footer">
           <div class="stem-footer-container">
             <div class="mdl-mini-footer__left-section">
-              <span class="mdl-typography--title">Affiliates</span>
+              <span class="mdl-typography--headline" style="padding-right: 15px;">Affiliates</span>
               {% for org in affiliates %}
-              <img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}">
+              <a href="{{ org.link }}"><img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}"></a>
               {% endfor %}
             </div>
             <div class="mdl-mini-footer__right-section">
-              <p>Contact us: <span class="mdl-typography--body-2-color-contrast">info@stemandbeyond.org</span></p>
-              <span class="mdl-typography--display-1-color-contrast" id="typed-title"></span>
+              <p class="mdl-typography--headline" style="padding-top: 25px;">Contact Us: <a href="mailto:info@stemandbeyond.org"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
             </div>
           </div>
         </footer>

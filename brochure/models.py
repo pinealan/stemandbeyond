@@ -10,13 +10,14 @@ def format_photo_path(instance, filename):
 
 
 class Speaker(Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, blank=True)
     photo = models.ImageField(
-        upload_to=format_photo_path
+        upload_to=format_photo_path,
+        blank=True
     )
-    degree = models.CharField(max_length=50)
-    subject = models.CharField(max_length=50)
-    abstract = models.TextField()
+    degree = models.CharField(max_length=50, blank=True)
+    subject = models.CharField(max_length=50, blank=True)
+    abstract = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
@@ -41,7 +42,7 @@ class Metatag(Model):
 
 class Content(Model):
     field = models.CharField(max_length=100)
-    text = models.TextField()
+    text = models.TextField(blank=True)
 
     def __str__(self):
         return self.field

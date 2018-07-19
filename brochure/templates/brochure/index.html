@@ -88,8 +88,10 @@
                 <p>{{ s.abstract | truncatewords:20 }}</p>
                 <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect">show more</button>
               </div>
+
               <div class="stem-show-more mdl-shadow--6dp">
-                <div class="mdl-card__supporting-text">
+                <div class="mdl-card__supporting-text mdl-color-text--black">
+                  <h4>{{ s.title }}</h4>
                   <p>{{ s.abstract }}</p>
                   <button class="stem-hide-button mdl-button mdl-button--fab mdl-button--primary mdl-js-button mdl-js-ripple-effect">
                     <i class="material-icons">close</i>
@@ -112,7 +114,7 @@
               {% endfor %}
             </div>
             <div class="mdl-mini-footer__right-section">
-              <p class="mdl-typography--headline" style="padding-top: 25px;" id="contact-us">Contact Us: <a href="mailto:info@stemandbeyond.org"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
+              <p class="mdl-typography--headline" style="padding-top: 25px;" id="contact-us">Contact Us: <a href="mailto:info@stemandbeyond.org" target="_blank"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
             </div>
           </div>
         </footer>
@@ -136,8 +138,6 @@
         var show = document.getElementsByClassName('stem-show-button');
         Array.forEach(show, function(item, index) {
           item.onclick = function() {
-            console.log(this);
-            console.log(this.parentElement.nextElementSibling);
             this.parentElement.nextElementSibling.classList.add('stem-show-more--shown');
           };
         });

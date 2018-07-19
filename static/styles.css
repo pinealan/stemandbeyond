@@ -140,7 +140,7 @@ p {
     background-color: inherit;
 }
 .stem-show-more {
-    background-color: rgba(255,255,255,.98);
+    background-color: rgb(240,255,255);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -154,11 +154,12 @@ p {
 }
 .stem-hide-button {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 16px;
+    left: 16px;
 }
 .stem-show-button {
-
+    padding: 0 8px;
+    border-radius: 4px;
 }
 .stem-affiliate-image {
     max-height: 100px;

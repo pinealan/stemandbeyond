@@ -35,6 +35,9 @@ p {
     justify-content: flex-end;
     padding: 0 10px;
 }
+.stem-landing-header {
+    font-size: 18px;
+}
 .stem-lightbulb-img {
     max-height: 500px;
     max-width: 100vw;
@@ -78,6 +81,9 @@ p {
         top: -135px;
         border-radius: 50px;
     }
+}
+.stem-wordcloud {
+    width: 100%;
 }
 .stem-welcome,
 .stem-goal {

@@ -30,17 +30,22 @@
             <div class="stem-lightbulb-glow"></div>
           </div>
           <div class="stem-landing-details">
-            <p class="mdl-typography--title color-grey">Date: <span class="mdl-typography--headline color-orange">{{ content.date }}</span></p>
-            <p class="mdl-typography--title color-grey">Venue: <a href="#contact-us"><span class="mdl-typography--headline color-orange">{{ content.venue }}</span></a></p>
+            <span class="mdl-typography--subhead">Date: </span><p class="mdl-typography--headline color-orange">{{ content.date }}</p>
+            <span class="mdl-typography--subhead">Venue: </span><a href="#contact-us"><p class="mdl-typography--headline color-orange">{{ content.venue }}</p></a>
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" style="max-width: 250px; margin-top: 10px;" disabled>Registraion opens soon!</button>
           </div>
         </section>
 
         <section class="stem-welcome">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
-            <h3 class="mdl-card__title color-grey">What do You want to do at University?</h3>
-            <p class="color-grey" style="padding: 0 16px;">{{ content.welcome }}</p>
             <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--8-col">
+                <h3 class="mdl-card__title color-grey" style="padding: 16px 0;">What do You want to do at University?</h3>
+                <p class="color-grey">{{ content.welcome }}</p>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col">
+                <img class="stem-wordcloud" src="/static/wordcloud.jpg" alt="subject-wordcloud">
+              </div>
               <div class="mdl-cell mdl-cell--4-col">
                 <h4>{{ content.welcome_header_1 }}</h4>
                 <p class="color-grey">{{ content.welcome_text_1 }}</p>
@@ -61,7 +66,7 @@
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
             <div class="mdl-grid">
               <div class="mdl-cell mdl-cell--4-col">
-                <h3 class="mdl-card__title color-grey" style="padding: 16px 0;">Our Goal</h3>
+                <h3 class="mdl-card__title color-grey" style="padding: 16px 0;">About Us</h3>
                 <span class="mdl-typography--display-1-color-contrast" id="typed-title"></span>
               </div>
               <div class="mdl-cell mdl-cell--8-col">
@@ -144,7 +149,7 @@
       (function() {
 
         var typed = new Typed("#typed-title", {
-          strings: ['Science', 'Technology', 'Engineering', 'Mathematics'],
+          strings: ['Science', 'Technology', 'Engineering', 'Arts', 'Mathematics'],
           typeSpeed: 50,
           backSpeed: 40,
           backDelay: 800,

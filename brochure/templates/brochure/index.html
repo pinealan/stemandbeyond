@@ -75,7 +75,7 @@
           <h2 class="stem-speaker-title mdl-typography--display-2-color-contrast">Speakers</h2>
           <div class="mdl-grid">
           {% for s in speakers %}
-            <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
+            <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp stem-speaker-card">
               <div class="mdl-card__media mdl-card__media--clip">
                 <img class="stem-speaker-image" src="media/{{ s.photo }}" border="0" alt="">
               </div>
@@ -85,7 +85,16 @@
               </div>
               <div class="mdl-card__supporting-text">
                 <p class="stem-speaker-topic mdl-typography--title">{{ s.subject }}</p>
-                <p class="">{{ s.abstract }}</p>
+                <p>{{ s.abstract | truncatewords:20 }}</p>
+                <button class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect">show more</button>
+              </div>
+              <div class="mdl-card__show-more mdl-shadow--6dp">
+                <div class="mdl-card__supporting-text">
+                  <p>{{ s.abstract }}</p>
+                  <button class="mdl-button mdl-button--fab mdl-button--colored mdl-card__hide-button">
+                    <i class="material-icons">close</i>
+                  </button>
+                </div>
               </div>
             </div>
           {% endfor %}

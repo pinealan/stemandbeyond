@@ -12,7 +12,7 @@
 }
 main {
     background-image: url('/static/background.svg');
-    background-size: contain;
+    background-size: 100vw;
     background-repeat: repeat-y;
 }
 p {
@@ -106,9 +106,6 @@ p {
     max-width: 1320px;
     padding: 30px 0 30px;
 }
-.stem-speaker .mdl-card {
-    border-radius: 6px;
-}
 .stem-speaker-title {
     margin-left: 14px;
 }
@@ -123,6 +120,12 @@ p {
 .stem-speaker-topic{
     color: rgb(244,67,54);
 }
+.stem-speaker-card {
+    border-radius: 6px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
 .mdl-card__title--col {
     flex-direction: column;
 }
@@ -135,6 +138,69 @@ p {
 }
 .mdl-card__media {
     background-color: inherit;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    display: none;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    display: none;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+  to {
+    -webkit-transform: translate(0, 0, 0);
+    transform: translate(0, 0, 0);
+  }
+}
+@-webkit-keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    display: none;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+@keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    display: none;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+.mdl-card__show-more {
+    background-color: rgba(255,255,255,.98);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.mdl-card__show-more--hidden {
+    animation: slideOutLeft 1s;
+}
+.mdl-card__show-more--shown {
+    animation: slideInLeft 1s;
+}
+.mdl-card__hide-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
 .stem-affiliate-image {
     max-height: 100px;

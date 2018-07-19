@@ -139,7 +139,7 @@ p {
 .mdl-card__media {
     background-color: inherit;
 }
-.stem-show-more {
+.stem-overlay {
     background-color: rgb(240,255,255);
     position: absolute;
     height: 100%;
@@ -148,7 +148,7 @@ p {
     top: 0;
     transition: transform .5s;
 }
-.stem-show-more--shown {
+.stem-overlay--shown {
     -webkit-transform: translate(102%, 0);
     transform: translate(102, 0);
 }

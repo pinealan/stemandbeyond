@@ -152,14 +152,14 @@
         });
 
         var show = document.getElementsByClassName('stem-show-button');
-        Array.forEach(show, function(item, index) {
+        Array.from(show).forEach(function(item, index) {
           item.onclick = function() {
             this.parentElement.nextElementSibling.classList.add('stem-overlay--shown');
           };
         });
 
         var hide = document.getElementsByClassName('stem-hide-button');
-        Array.forEach(hide, function(item, index) {
+        Array.from(hide).forEach(function(item, index) {
           item.onclick = function() {
             this.parentElement.parentElement.classList.remove('stem-overlay--shown');
           };

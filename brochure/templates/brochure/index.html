@@ -40,8 +40,10 @@
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
             <div class="mdl-grid">
               <div class="mdl-cell mdl-cell--8-col">
-                <h3 class="mdl-card__title color-grey" style="padding: 16px 0;">What do You want to do at University?</h3>
-                <p class="color-grey">{{ content.welcome }}</p>
+                <!-- Todo -->
+                <h4 class="stem-no-sidepad color-grey">Do <span class="color-red"> science </span> degrees mean careers in <span class="color-orange">education</span>?</h4>
+                <h4 class="stem-no-sidepad color-grey">Will <span class="color-red">humanities</span> degrees get you no more than <span class="color-orange">starvation</span>?</h4>
+                <p class="color-grey">Join our exciting seminar and sharing session given by 10 current Oxford students to find out what universities can really offer you.</p>
               </div>
               <div class="mdl-cell mdl-cell--4-col">
                 <img class="stem-wordcloud" src="/static/wordcloud.jpg" alt="subject-wordcloud">
@@ -65,12 +67,13 @@
         <section class="stem-goal">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
             <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col">
-                <h3 class="mdl-card__title color-grey" style="padding: 16px 0;">About Us</h3>
+              <div class="mdl-cell mdl-cell--3-col">
+                <h3 class="stem-no-sidepad color-grey">{{ content.about_title }}</h3>
                 <span class="mdl-typography--display-1-color-contrast" id="typed-title"></span>
               </div>
-              <div class="mdl-cell mdl-cell--8-col">
-                <p class="color-grey" style="padding: 32px 0 0;">{{ content.goal }}</p>
+              <div class="mdl-cell mdl-cell--9-col">
+                <h3 class="stem-no-sidepad color-grey">{{ content.about_subtitle }}</h3>
+                <p class="color-grey" style="padding: 32px 0 0;">{{ content.about_text}}</p>
               </div>
             </div>
           </div>

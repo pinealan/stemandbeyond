@@ -20,5 +20,6 @@ import brochure.views as brochure
 
 urlpatterns = [
     path('', brochure.index),
+    path('zh/', brochure.zh),
     path('admin/', admin.site.urls),
 ]

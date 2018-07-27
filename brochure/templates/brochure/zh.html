@@ -99,8 +99,8 @@
                 <p class="stem-speaker-topic mdl-typography--title" style="margin-bottom: 8px;">{{ s.chin_title }}</p>
                 <p class="mdl-typography--subhead-color-contrast">{{ s.chin_subject }}</p>
                 <p>{{ s.chin_abstract | truncatechars:70 }}</p>
-                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' | cut:':' }}-overlay">了解更多</button>
               </div>
+              <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' | cut:':' }}-overlay" style="width: 80px">了解更多</button>
 
               <div class="stem-overlay mdl-shadow--6dp" id="{{ s.name | cut:' ' | cut:':' }}-overlay">
                 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -167,7 +167,7 @@
         var show = document.getElementsByClassName('stem-show-button');
         Array.from(show).forEach(function(item, index) {
           item.onclick = function() {
-            this.parentElement.nextElementSibling.classList.add('stem-overlay--shown');
+            this.nextElementSibling.classList.add('stem-overlay--shown');
           };
         });
 

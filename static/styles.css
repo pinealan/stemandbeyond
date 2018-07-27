@@ -116,6 +116,9 @@ p {
     max-width: 1320px;
     padding: 30px 0 30px;
 }
+.stem-speaker-card {
+    height: 660px;
+}
 .stem-speaker-title {
     margin-left: 14px;
 }
@@ -168,8 +171,12 @@ p {
     left: 16px;
 }
 .stem-show-button {
-    padding: 0 8px;
     border-radius: 4px;
+    bottom: 0;
+    margin: 16px 8px;
+    padding: 0 8px;
+    position: absolute;
+    width: 100px;
 }
 .stem-affiliate-image {
     max-height: 100px;

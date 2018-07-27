@@ -30,8 +30,8 @@
             <div class="stem-lightbulb-glow"></div>
           </div>
           <div class="stem-landing-details">
-            <span class="mdl-typography--subhead">Date: </span><p class="mdl-typography--headline color-orange">{{ content.chin_date }}</p>
-            <span class="mdl-typography--subhead">Venue: </span><a href="#contact-us"><p class="mdl-typography--headline color-orange">{{ content.chin_venue }}</p></a>
+            <span class="mdl-typography--subhead">日期: </span><p class="mdl-typography--headline color-orange">{{ content.chin_date }}</p>
+            <span class="mdl-typography--subhead">地點: </span><a href="#contact-us"><p class="mdl-typography--headline color-orange">{{ content.chin_venue }}</p></a>
           </div>
         </section>
 
@@ -137,7 +137,7 @@
         <footer class="stem-footer mdl-mini-footer">
           <div class="stem-footer-container">
             <div class="mdl-mini-footer__left-section">
-              <span class="mdl-typography--headline" style="padding-right: 15px;">聯辦</span>
+              <span class="mdl-typography--headline" style="padding-right: 15px;">聯辦機構</span>
               {% for org in affiliates %}
               <a href="{{ org.link }}" target="_blank"><img class="stem-affiliate-image" src="/media/{{ org.photo }}" alt="{{ org.name }}"></a>
               {% endfor %}

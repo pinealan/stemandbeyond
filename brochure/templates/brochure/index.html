@@ -23,51 +23,50 @@
   </head>
 
   <body>
-      <main>
-        <section class="stem-landing">
-          <div class="stem-lightbulb-holder">
-            <img class="stem-lightbulb-img" src="/static/logo-trans.png" alt="STEM and Beyond logo">
-            <div class="stem-lightbulb-glow"></div>
-          </div>
-          <div class="stem-landing-details">
-            {% block landing %}{% endblock %}
-          </div>
-        </section>
+    <main>
+      <section class="stem-landing">
+        <div class="stem-lightbulb-holder">
+          <img class="stem-lightbulb-img" src="/static/logo-trans.png" alt="STEM and Beyond logo">
+          <div class="stem-lightbulb-glow"></div>
+        </div>
+        <div class="stem-landing-details">
+          {% block landing %}{% endblock %}
+        </div>
+      </section>
 
-        <section class="stem-welcome">
-          <div class="mdl-card mdl-shadow--6dp stem-card--wide">
-            <div class="mdl-grid">
-              {% block welcome %}{% endblock %}
-            </div>
-          </div>
-        </section>
-
-        <section class="stem-goal">
-          <div class="mdl-card mdl-shadow--6dp stem-card--wide">
-            <div class="mdl-grid">
-              {% block about %}{% endblock %}
-            </div>
-          </div>
-        </section>
-
-        <section class="stem-speaker" id="speakers">
-          <h2 class="stem-speaker-title mdl-typography--display-2-color-contrast">Speakers</h2>
+      <section class="stem-welcome">
+        <div class="mdl-card mdl-shadow--6dp stem-card--wide">
           <div class="mdl-grid">
-            {% for s in speakers %}
-              {% block speaker %}{% endblock %}
-            {% endfor %}
+            {% block welcome %}{% endblock %}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1844.6640534461887!2d114.19230577180042!3d22.378985082991246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406549b921f65%3A0x2ac424852e95d8b3!2sThe+Hong+Kong+Academy+for+Gifted+Education!5e0!3m2!1sen!2suk!4v1531719471533" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-        <footer class="stem-footer mdl-mini-footer">
-          <div class="stem-footer-container">
-            {% block footer %}{% endblock %}
+      <section class="stem-goal">
+        <div class="mdl-card mdl-shadow--6dp stem-card--wide">
+          <div class="mdl-grid">
+            {% block about %}{% endblock %}
           </div>
-        </footer>
-      </main>
-    </div>
+        </div>
+      </section>
+
+      <section class="stem-speaker" id="speakers">
+        <h2 class="stem-speaker-title mdl-typography--display-2-color-contrast">Speakers</h2>
+        <div class="mdl-grid">
+          {% for s in speakers %}
+            {% block speaker %}{% endblock %}
+          {% endfor %}
+        </div>
+      </section>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1844.6640534461887!2d114.19230577180042!3d22.378985082991246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406549b921f65%3A0x2ac424852e95d8b3!2sThe+Hong+Kong+Academy+for+Gifted+Education!5e0!3m2!1sen!2suk!4v1531719471533" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      <footer class="stem-footer mdl-mini-footer">
+        <div class="stem-footer-container">
+          {% block footer %}{% endblock %}
+        </div>
+      </footer>
+    </main>
 
     <!-- Scripts -->
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>

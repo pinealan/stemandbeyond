@@ -11,7 +11,7 @@ def index(req):
     context['metatags'] = list(Metatag.objects.all())
     context['affiliates'] = list(Affiliate.objects.all())
 
-    return render(req, 'brochure/index.html', context=context)
+    return render(req, 'brochure/en.html', context=context)
 
 
 def zh(req):

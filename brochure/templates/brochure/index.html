@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     {% for m in metatags %}
-    <meta "{{ m.attr }}"="{{ m.tag }}" content="{{ m.content }}">
+      <meta "{{ m.attr }}"="{{ m.tag }}" content="{{ m.content }}">
     {% endfor %}
     <title>STEM and Beyond</title>
 
@@ -30,40 +30,14 @@
             <div class="stem-lightbulb-glow"></div>
           </div>
           <div class="stem-landing-details">
-            <span class="mdl-typography--subhead">Date: </span><p class="mdl-typography--headline color-orange">{{ content.date }}</p>
-            <span class="mdl-typography--subhead">Venue: </span><a href="#contact-us"><p class="mdl-typography--headline color-orange">{{ content.venue }}</p></a>
+            {% block landing %}{% endblock %}
           </div>
         </section>
 
         <section class="stem-welcome">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
             <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--8-col">
-                <!-- Todo -->
-                <br>
-                <h4 class="stem-no-sidepad color-grey">Do <span class="color-red"> science </span> degrees imply careers in <span class="color-orange">education</span>?</h4>
-                <h4 class="stem-no-sidepad color-grey">Will <span class="color-red">humanities</span> degrees get you nothing but <span class="color-orange">starvation</span>?</h4>
-                <br>
-                <p class="color-grey mdl-typography--subtitle">Join our exciting seminar and sharing session given by a group Oxford and local University students to find our what universities can rerally offer you. Whether you're into science or arts, you will learn about these academic fields from an insider's view.</p>
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" href="https://hkage.org.hk/b5/student/Registration/talk/nonMemberApp.php?pid=2923" target="_blank" style="max-width: 250px; margin-top: 10px;">Register now!</a>
-                <br>
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--contrast" href="https://hkage.org.hk/b5/student/Registration/talk/logon2.php?pid=2923" target="_blank" style="max-width: 250px; margin-top: 10px;">Register (HKAGE members)</a>
-              </div>
-              <div class="mdl-cell mdl-cell--4-col">
-                <img class="stem-wordcloud" src="/static/wordcloud.jpg" alt="subject-wordcloud">
-              </div>
-              <div class="mdl-cell mdl-cell--4-col">
-                <h4 style="font-weight: 500;">{{ content.welcome_header_1 }}</h4>
-                <p class="color-grey">{{ content.welcome_text_1 }}</p>
-              </div>
-              <div class="mdl-cell mdl-cell--4-col">
-                <h4 style="font-weight: 500;">{{ content.welcome_header_2 }}</h4>
-                <p class="color-grey">{{ content.welcome_text_2 }}</p>
-              </div>
-              <div class="mdl-cell mdl-cell--4-col">
-                <h4 style="font-weight: 500;">{{ content.welcome_header_3 }}</h4>
-                <p class="color-grey">{{ content.welcome_text_3 }}</p>
-              </div>
+              {% block welcome %}{% endblock %}
             </div>
           </div>
         </section>
@@ -71,14 +45,7 @@
         <section class="stem-goal">
           <div class="mdl-card mdl-shadow--6dp stem-card--wide">
             <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--3-col">
-                <h3 class="stem-no-sidepad color-grey">{{ content.about_title }}</h3>
-                <span class="mdl-typography--display-1-color-contrast" id="typed-title"></span>
-              </div>
-              <div class="mdl-cell mdl-cell--9-col">
-                <h3 class="stem-no-sidepad color-grey">{{ content.about_subtitle }}</h3>
-                <p class="color-grey" style="padding: 32px 0 0;">{{ content.about_text}}</p>
-              </div>
+              {% block about %}{% endblock %}
             </div>
           </div>
         </section>
@@ -86,49 +53,9 @@
         <section class="stem-speaker" id="speakers">
           <h2 class="stem-speaker-title mdl-typography--display-2-color-contrast">Speakers</h2>
           <div class="mdl-grid">
-          {% for s in speakers %}
-            <div class="stem-speaker-card mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
-              <div class="mdl-card__media mdl-card__media--clip">
-                <img class="stem-speaker-image" src="media/{{ s.photo }}" border="0" alt="">
-              </div>
-              <div class="mdl-card__title mdl-card__title--col">
-                <h4 class="mdl-card__title-text mdl-card__title-text--begin">{{ s.name }}</h4>
-                <h5 class="stem-speaker-degree mdl-card__title-text mdl-card__title-text--begin">{{ s.degree }}</h5>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <p class="stem-speaker-topic mdl-typography--title" style="margin-bottom: 8px;">{{ s.title }}</p>
-                <p class="mdl-typography--subhead-color-contrast">{{ s.subject }}</p>
-                <p>{{ s.abstract | truncatewords:20 }}</p>
-              </div>
-              <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' | cut:':' }}-overlay">show more</button>
-
-              <div class="stem-overlay mdl-shadow--6dp" id="{{ s.name | cut:' ' | cut:':' }}-overlay">
-                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                  <div class="mdl-tabs__tab-bar">
-                    <a href="#{{ s.name | cut:' '| cut:':'  }}-abstract" class="mdl-tabs__tab is-active">Talk</a>
-                    <a href="#{{ s.name | cut:' '| cut:':'  }}-profile" class="mdl-tabs__tab">About</a>
-                  </div>
-
-                  <div class="mdl-tabs__panel is-active" id="{{ s.name | cut:' ' | cut:':' }}-abstract">
-                    <div class="mdl-card__supporting-text mdl-color-text--black">
-                      <h4>{{ s.title }}</h4>
-                      <p>{{ s.abstract }}</p>
-                    </div>
-                  </div>
-
-                  <div class="mdl-tabs__panel" id="{{ s.name | cut:' ' | cut:':' }}-profile">
-                    <div class="mdl-card__supporting-text mdl-color-text--black">
-                      <p>{{ s.profile }}</p>
-                    </div>
-                  </div>
-
-                  <button class="stem-hide-button mdl-button mdl-button--fab mdl-button--primary mdl-js-button mdl-js-ripple-effect">
-                    <i class="material-icons">close</i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
+            {% for s in speakers %}
+              {% block speaker %}{% endblock %}
+            {% endfor %}
           </div>
         </section>
 
@@ -136,15 +63,7 @@
 
         <footer class="stem-footer mdl-mini-footer">
           <div class="stem-footer-container">
-            <div class="mdl-mini-footer__left-section">
-              <span class="mdl-typography--headline" style="padding-right: 15px;">Affiliates</span>
-              {% for org in affiliates %}
-              <a href="{{ org.link }}" target="_blank"><img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}"></a>
-              {% endfor %}
-            </div>
-            <div class="mdl-mini-footer__right-section">
-              <p class="mdl-typography--headline" style="padding-top: 25px;" id="contact-us">Contact Us: <a href="mailto:info@stemandbeyond.org" target="_blank"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
-            </div>
+            {% block footer %}{% endblock %}
           </div>
         </footer>
       </main>

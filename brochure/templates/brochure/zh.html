@@ -42,12 +42,12 @@
                 <!-- Todo -->
                 <br>
                 <h4 class="stem-no-sidepad color-grey">大學讀<span class="color-red">數理</span>就一定要<span class="color-orange">教書</span>？</h4>
-                <h4 class="stem-no-sidepad color-grey">研<span class="color-red">人文哲學</span>就一定要<span class="color-orange">乞食</span>？</h4>
+                <h4 class="stem-no-sidepad color-grey">研人文<span class="color-red">哲學</span>就一定要<span class="color-orange">乞食</span>？</h4>
                 <br>
                 <p class="color-grey mdl-typography--subtitle">十多名牛津大學及本地大學本科生將分享在大學深造的經驗。不論你是對數理科技還是人文藝術有興趣，我們希望你在大學選科作出最合意，最明智的決定。</p>
                 <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" href="https://hkage.org.hk/b5/student/Registration/talk/nonMemberApp.php?pid=2923" target="_blank" style="max-width: 250px; margin-top: 10px;">現即報名</a>
                 <br>
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--contrast" href="https://hkage.org.hk/b5/student/Registration/talk/logon2.php?pid=2923" target="_blank" style="max-width: 250px; margin-top: 10px;">報名(HKAGE membmers)</a>
+                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--contrast" href="https://hkage.org.hk/b5/student/Registration/talk/logon2.php?pid=2923" target="_blank" style="max-width: 250px; margin-top: 10px;">報名(HKAGE members)</a>
               </div>
               <div class="mdl-cell mdl-cell--4-col">
                 <img class="stem-wordcloud" src="/static/wordcloud.jpg" alt="subject-wordcloud">
@@ -115,7 +115,7 @@
                     </div>
                   </div>
 
-                  <div class="mdl-tabs__panel" id="{{ s.chin_name | cut:' ' | cut:':' }}-profile">
+                  <div class="mdl-tabs__panel" id="{{ s.name | cut:' ' | cut:':' }}-profile">
                     <div class="mdl-card__supporting-text mdl-color-text--black">
                       <p>{{ s.chin_profile }}</p>
                     </div>

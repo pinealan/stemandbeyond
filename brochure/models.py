@@ -21,6 +21,7 @@ class Speaker(Model):
     profile = models.TextField(blank=True)
     abstract = models.TextField(blank=True)
 
+    chin_name = models.CharField(max_length=10, blank=True)
     chin_title = models.CharField(max_length=100, blank=True)
     chin_degree = models.CharField(max_length=50, blank=True)
     chin_subject = models.CharField(max_length=50, blank=True)

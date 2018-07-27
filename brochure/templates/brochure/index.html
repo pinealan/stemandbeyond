@@ -87,7 +87,7 @@
           <h2 class="stem-speaker-title mdl-typography--display-2-color-contrast">Speakers</h2>
           <div class="mdl-grid">
           {% for s in speakers %}
-            <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp stem-speaker-card">
+            <div class="stem-speaker-card mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
               <div class="mdl-card__media mdl-card__media--clip">
                 <img class="stem-speaker-image" src="media/{{ s.photo }}" border="0" alt="">
               </div>
@@ -96,10 +96,11 @@
                 <h5 class="stem-speaker-degree mdl-card__title-text mdl-card__title-text--begin">{{ s.degree }}</h5>
               </div>
               <div class="mdl-card__supporting-text">
-                <p class="stem-speaker-topic mdl-typography--title">{{ s.subject }}</p>
+                <p class="stem-speaker-topic mdl-typography--title" style="margin-bottom: 8px;">{{ s.title }}</p>
+                <p class="mdl-typography--subhead-color-contrast">{{ s.subject }}</p>
                 <p>{{ s.abstract | truncatewords:20 }}</p>
-                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' | cut:':' }}-overlay">show more</button>
               </div>
+              <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' | cut:':' }}-overlay">show more</button>
 
               <div class="stem-overlay mdl-shadow--6dp" id="{{ s.name | cut:' ' | cut:':' }}-overlay">
                 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -166,7 +167,7 @@
         var show = document.getElementsByClassName('stem-show-button');
         Array.from(show).forEach(function(item, index) {
           item.onclick = function() {
-            this.parentElement.nextElementSibling.classList.add('stem-overlay--shown');
+            this.nextElementSibling.classList.add('stem-overlay--shown');
           };
         });
 

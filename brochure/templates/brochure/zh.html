@@ -84,7 +84,7 @@
         </section>
 
         <section class="stem-speaker" id="speakers">
-          <h2 class="stem-speaker-title mdl-typography--display-2-color-contrast">Speakers</h2>
+          <h2 class="stem-speaker-title mdl-typography--display-2-color-contrast">講者</h2>
           <div class="mdl-grid">
           {% for s in speakers %}
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp stem-speaker-card">
@@ -96,16 +96,17 @@
                 <h5 class="stem-speaker-degree mdl-card__title-text mdl-card__title-text--begin">{{ s.chin_degree }}</h5>
               </div>
               <div class="mdl-card__supporting-text">
-                <p class="stem-speaker-topic mdl-typography--title">{{ s.chin_subject }}</p>
-                <p>{{ s.chin_title }}</p>
-                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' | cut:':' }}-overlay">更多</button>
+                <p class="stem-speaker-topic mdl-typography--title" style="margin-bottom: 8px;">{{ s.chin_title }}</p>
+                <p class="mdl-typography--subhead-color-contrast">{{ s.chin_subject }}</p>
+                <p>{{ s.chin_abstract | truncatechars:70 }}</p>
+                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' | cut:':' }}-overlay">了解更多</button>
               </div>
 
               <div class="stem-overlay mdl-shadow--6dp" id="{{ s.name | cut:' ' | cut:':' }}-overlay">
                 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                   <div class="mdl-tabs__tab-bar">
-                    <a href="#{{ s.name | cut:' ' | cut:':' }}-abstract" class="mdl-tabs__tab is-active">Talk</a>
-                    <a href="#{{ s.name | cut:' ' | cut:':' }}-profile" class="mdl-tabs__tab">About</a>
+                    <a href="#{{ s.name | cut:' ' | cut:':' }}-abstract" class="mdl-tabs__tab is-active">演講內容</a>
+                    <a href="#{{ s.name | cut:' ' | cut:':' }}-profile" class="mdl-tabs__tab">講者簡介</a>
                   </div>
 
                   <div class="mdl-tabs__panel is-active" id="{{ s.name | cut:' ' | cut:':' }}-abstract">

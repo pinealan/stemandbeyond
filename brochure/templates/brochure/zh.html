@@ -87,7 +87,7 @@
           {% for s in speakers %}
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp stem-speaker-card">
               <div class="mdl-card__media mdl-card__media--clip">
-                <img class="stem-speaker-image" src="media/{{ s.photo }}" border="0" alt="">
+                <img class="stem-speaker-image" src="/media/{{ s.photo }}" border="0" alt="">
               </div>
               <div class="mdl-card__title mdl-card__title--col">
                 <h4 class="mdl-card__title-text mdl-card__title-text--begin">{{ s.chin_name }}</h4>
@@ -95,25 +95,25 @@
               </div>
               <div class="mdl-card__supporting-text">
                 <p class="stem-speaker-topic mdl-typography--title">{{ s.chin_subject }}</p>
-                <p>{{ s.chin_abstract | truncatewords:20 }}</p>
-                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' }}-overlay">show more</button>
+                <p>{{ s.chin_title }}</p>
+                <button class="stem-show-button mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" href="{{ s.name | cut:' ' | cut:':' }}-overlay">更多</button>
               </div>
 
-              <div class="stem-overlay mdl-shadow--6dp" id="{{ s.name | cut:' ' }}-overlay">
+              <div class="stem-overlay mdl-shadow--6dp" id="{{ s.name | cut:' ' | cut:':' }}-overlay">
                 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                   <div class="mdl-tabs__tab-bar">
-                    <a href="#{{ s.name | cut:' ' }}-abstract" class="mdl-tabs__tab is-active">Talk</a>
-                    <a href="#{{ s.name | cut:' ' }}-profile" class="mdl-tabs__tab">About</a>
+                    <a href="#{{ s.name | cut:' ' | cut:':' }}-abstract" class="mdl-tabs__tab is-active">Talk</a>
+                    <a href="#{{ s.name | cut:' ' | cut:':' }}-profile" class="mdl-tabs__tab">About</a>
                   </div>
 
-                  <div class="mdl-tabs__panel is-active" id="{{ s.name | cut:' ' }}-abstract">
+                  <div class="mdl-tabs__panel is-active" id="{{ s.name | cut:' ' | cut:':' }}-abstract">
                     <div class="mdl-card__supporting-text mdl-color-text--black">
                       <h4>{{ s.chin_title }}</h4>
                       <p>{{ s.chin_abstract }}</p>
                     </div>
                   </div>
 
-                  <div class="mdl-tabs__panel" id="{{ s.chin_name | cut:' ' }}-profile">
+                  <div class="mdl-tabs__panel" id="{{ s.chin_name | cut:' ' | cut:':' }}-profile">
                     <div class="mdl-card__supporting-text mdl-color-text--black">
                       <p>{{ s.chin_profile }}</p>
                     </div>

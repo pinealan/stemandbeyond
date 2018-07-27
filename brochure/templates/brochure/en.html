@@ -93,14 +93,16 @@
 {% endblock %}
 
 
-{% block footer %}
-<div class="mdl-mini-footer__left-section">
-  <span class="mdl-typography--headline" style="padding-right: 15px;">Affiliates</span>
-  {% for org in affiliates %}
-    <a href="{{ org.link }}" target="_blank"><img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}"></a>
-  {% endfor %}
-</div>
-<div class="mdl-mini-footer__right-section">
-  <p class="mdl-typography--headline" style="padding-top: 25px;" id="contact-us">Contact Us: <a href="mailto:info@stemandbeyond.org" target="_blank"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
-</div>
+{% block footer_left %}
+<span class="mdl-typography--headline" style="padding-right: 15px;">Affiliates</span>
+{% for org in affiliates %}
+  <a href="{{ org.link }}" target="_blank"><img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}"></a>
+{% endfor %}
+{% endblock %}
+
+
+{% block footer_right %}
+<p class="mdl-typography--headline" style="padding-top: 25px;" id="contact-us">Contact Us: <a href="mailto:info@stemandbeyond.org" target="_blank"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
+<a class="color-grey mdl-typography--title" style="text-decoration: none; padding: 0 0 24px;" href="/zh/">繁</a>
+ / <a class="color-grey mdl-typography--title" style="text-decoration: none; padding: 0 0 24px;" href="/zh/">EN</a>
 {% endblock %}

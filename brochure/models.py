@@ -43,7 +43,7 @@ class Metatag(Model):
         choices=((NAME, NAME), (ITEM, ITEM), (PROP, PROP)),
         default=NAME,
     )
-    content = models.CharField(max_length=100)
+    content = models.TextField(blank=True)
 
     def __str__(self):
         return '{}: {}'.format(self.tag, self.content)

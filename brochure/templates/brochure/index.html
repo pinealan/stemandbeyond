@@ -2,13 +2,16 @@
 <html lang="en">
 
   <head>
+    <title>STEM and Beyond</title>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    {% for m in metatags %}
-      <meta "{{ m.attr }}"="{{ m.tag }}" content="{{ m.content }}">
+
+    <!-- Social/SEO -->
+    {% for m in metas %}
+    <meta {{ m.attr }}="{{ m.tag }}" content="{{ m.content }}">
     {% endfor %}
-    <title>STEM and Beyond</title>
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/static/favicon.png">

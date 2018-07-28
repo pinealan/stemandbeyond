@@ -95,21 +95,24 @@ p {
     width: 100%;
 }
 .stem-welcome,
-.stem-goal {
+.stem-about {
     margin: auto;
     max-width: 1320px;
     padding: 30px 0 0;
-    width: 95vw;
+    width: 100%;
 }
-.stem-goal .mdl-card {
+.stem-about .mdl-card {
     padding-bottom: 32px;
+}
+.stem-about-main-text {
+    padding: 32px 0 0;
 }
 .stem-card--wide {
     border-radius: 10px;
     max-width: 1320px;
     margin: auto;
     padding: 4px;
-    width: 95vw;
+    width: 100%;
 }
 @media (min-width: 600px) {
     .stem-card--wide {
@@ -122,10 +125,16 @@ p {
     padding: 30px 0 30px;
 }
 .stem-speaker-card {
-    height: 660px;
+    height: 680px;
+    margin: 8px;
 }
 .stem-speaker-title {
     margin-left: 14px;
+}
+.stem-speaker-image-holder {
+    background-color: inherit;
+    height: 370px;
+    overflow: hidden;
 }
 .stem-speaker-image {
     vertical-align: center;
@@ -149,13 +158,6 @@ p {
 }
 .mdl-card__title-text--begin {
     align-self: start;
-}
-.mdl-card__media--clip {
-    height: 350px;
-    overflow: hidden;
-}
-.mdl-card__media {
-    background-color: inherit;
 }
 .stem-overlay {
     background-color: #fff;
@@ -182,6 +184,22 @@ p {
     padding: 0 8px;
     position: absolute;
     width: 100px;
+}
+@media (max-width: 490px) {
+    .mdl-grid {
+        padding: 0;
+    }
+    .mdl-cell {
+        margin: 8px;
+    }
+    .stem-speaker-card {
+        height: 760px;
+        margin: 8px 0;
+        width: 100%;
+    }
+    .stem-overlay .mdl-card__supporting-text {
+        padding: 8px;
+    }
 }
 .stem-affiliate-image {
     max-height: 100px;

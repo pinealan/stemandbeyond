@@ -4,6 +4,9 @@
 {% block landing %}
 <span class="mdl-typography--subhead">Date: </span><p class="mdl-typography--headline color-orange">{{ content.date }}</p>
 <span class="mdl-typography--subhead">Venue: </span><a href="#contact-us"><p class="mdl-typography--headline color-orange">{{ content.venue }}</p></a>
+<span class="color-lightgrey mdl-typography--subhead">
+  <a class="color-grey" style="text-decoration: none" href="/zh/">繁</a> | <a class="color-grey" style="text-decoration: none" href="/zh/">EN</a>
+</span>
 {% endblock %}
 
 
@@ -94,7 +97,7 @@
 
 
 {% block footer_left %}
-<span class="mdl-typography--headline" style="padding-right: 15px;">Affiliates</span>
+<p class="mdl-typography--headline">Affiliates</p>
 {% for org in affiliates %}
   <a href="{{ org.link }}" target="_blank"><img class="stem-affiliate-image" src="media/{{ org.photo }}" alt="{{ org.name }}"></a>
 {% endfor %}
@@ -102,7 +105,7 @@
 
 
 {% block footer_right %}
-<p class="mdl-typography--headline" style="padding-top: 25px;" id="contact-us">Contact Us: <a href="mailto:info@stemandbeyond.org" target="_blank"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
-<a class="color-grey mdl-typography--title" style="text-decoration: none; padding: 0 0 24px;" href="/zh/">繁</a>
- / <a class="color-grey mdl-typography--title" style="text-decoration: none; padding: 0 0 24px;" href="/zh/">EN</a>
+<p class="mdl-typography--headline" id="contact-us">Contact Us</p>
+<p><a href="mailto:info@stemandbeyond.org" target="_blank"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
+<p><a href="https://www.facebook.com/STEM-Beyond-2074621756112097/" target="_blank"><img class="stem-social-media-logo" src="/static/facebook.svg"></a></p>
 {% endblock %}

@@ -4,6 +4,9 @@
 {% block landing %}
 <span class="mdl-typography--subhead">日期: </span><p class="mdl-typography--headline color-orange">{{ content.chin_date }}</p>
 <span class="mdl-typography--subhead">地點: </span><a href="#contact-us"><p class="mdl-typography--headline color-orange">{{ content.chin_venue }}</p></a>
+<span class="color-lightgrey mdl-typography--subhead">
+  <a class="color-grey" style="text-decoration: none" href="/">EN</a> | <a class="color-grey" style="text-decoration: none" href="/zh/">繁</a>
+</span>
 {% endblock %}
 
 
@@ -94,7 +97,7 @@
 
 
 {% block footer_left %}
-<span class="mdl-typography--headline" style="padding-right: 15px;">聯辦機構</span>
+<p class="mdl-typography--headline">聯辦機構</p>
 {% for org in affiliates %}
   <a href="{{ org.link }}" target="_blank"><img class="stem-affiliate-image" src="/media/{{ org.photo }}" alt="{{ org.name }}"></a>
 {% endfor %}
@@ -102,7 +105,7 @@
 
 
 {% block footer_right %}
-<p class="mdl-typography--headline" style="padding-top: 25px;" id="contact-us">聯絡我們: <a href="mailto:info@stemandbeyond.org" target="_blank"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
-<a class="color-grey mdl-typography--title" style="text-decoration: none; padding: 0 0 24px" href="/">EN</a>
- / <a class="color-grey mdl-typography--title" style="text-decoration: none; padding: 0 0 24px;" href="/zh/">繁</a>
+<p class="mdl-typography--headline" id="contact-us">聯絡我們:</p>
+<p><a href="mailto:info@stemandbeyond.org" target="_blank"><span class="mdl-typography--headline-color-contrast">info@stemandbeyond.org</span></a></p>
+<p><a href="https://www.facebook.com/STEM-Beyond-2074621756112097/" target="_blank"><img class="stem-social-media-logo" src="/static/facebook.svg"></a></p>
 {% endblock %}
